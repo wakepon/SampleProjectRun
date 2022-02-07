@@ -6,11 +6,6 @@ public class FollowCamera : MonoBehaviour
 {
     [SerializeField] private Transform followObj;
     [SerializeField] private float xOffset;
-    
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
