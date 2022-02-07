@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
                 break;
             case State.result:
                 failedText.gameObject.SetActive(true);
-                if (_stateTimer > 2.0f)
+                if (_stateTimer > 1.0f && Input.GetMouseButtonDown(0))
                 {
                     ChangeState(State.ready);
                 }
