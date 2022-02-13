@@ -1,4 +1,4 @@
 # SampleProjectRun
 
-You can play the following link.
+You can play the game in the following site.
 https://unityroom.com/games/rungamesample
