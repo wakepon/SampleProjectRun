@@ -42,8 +42,10 @@ public class PlayerController : MonoBehaviour
 
     void JumpOperation()
     {
+        //The longer the player hold the button down, the higher he jump.
         if (Input.GetMouseButton(0))
         {
+            //If the character grounded, jump.
             if (groundChecker.IsGround && !_isJumping)
             {
                 _jumpStartHeight = _rigidbody2D.position.y;
@@ -53,19 +55,20 @@ public class PlayerController : MonoBehaviour
 
             _isJumping = true;
         }
-        else
+        else // release the button, then stop jumping
         {
             _isJumping = false;
             _isPassedJumpingTop = true;
         }
 
+        // when the player is jumping, and has not passed the top of the jump yet
         if (_isJumping && !_isPassedJumpingTop)
         {
-            if ((_jumpStartHeight + jumpHeight) > _rigidbody2D.position.y)
+            if ((_jumpStartHeight + jumpHeight) > _rigidbody2D.position.y) // when the player has not passed the top of the jump yet
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpSpeed);
             }
-            else
+            else // the player has passed the top of the jump
             {
                 _isPassedJumpingTop = true;
             }
