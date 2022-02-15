@@ -15,17 +15,17 @@ public class PlayerController : MonoBehaviour
     private bool _isJumping = false;
     private bool _isPassedJumpingTop = false;
     private float _jumpStartHeight = 0.0f;
-    private Vector3 startPosition;
+    private Vector3 _startPosition;
 
     void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        startPosition = transform.position;
+        _startPosition = transform.position;
     }
 
     public void ReadyToStart()
     {
-        transform.position = startPosition;
+        transform.position = _startPosition;
         _rigidbody2D.simulated = true;
     }
 
