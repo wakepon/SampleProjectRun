@@ -6,14 +6,14 @@ using UnityEngine;
 public class GroundCreator : MonoBehaviour
 {
     [SerializeField] private Ground groundPrefab;
-    [SerializeField] private float birthTiming = 15;
-    [SerializeField] private float minY = -9;
-    [SerializeField] private float maxY = 3;
-    [SerializeField] private float minLength = 6;
-    [SerializeField] private float maxLength = 10;
-    [SerializeField] private float maxYDifferece = 5;
+    [SerializeField] private float birthTiming = 15.0f;
+    [SerializeField] private float minY = -9.0f;
+    [SerializeField] private float maxY = 3.0f;
+    [SerializeField] private float minLength = 6.0f;
+    [SerializeField] private float maxLength = 10.0f;
+    [SerializeField] private float maxYDifferece = 5.0f;
     [SerializeField] private Vector3 firstGroundPos;
-    [SerializeField] private float groundInterval = 2;
+    [SerializeField] private float groundInterval = 2.0f;
     private List<Ground> _grounds = new List<Ground>();
     private float latestEdge = 0.0f;
 
