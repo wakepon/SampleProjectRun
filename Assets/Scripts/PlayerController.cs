@@ -36,8 +36,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        _rigidbody2D.velocity = new Vector2(runSpeed, _rigidbody2D.velocity.y);
+        Run();
         JumpOperation();
+    }
+
+    void Run()
+    {
+        if (groundChecker.IsGround)
+        {
+            _rigidbody2D.velocity = new Vector2(runSpeed, _rigidbody2D.velocity.y);
+        }
     }
 
     void JumpOperation()
